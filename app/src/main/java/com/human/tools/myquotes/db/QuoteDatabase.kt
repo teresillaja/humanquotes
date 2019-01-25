@@ -6,4 +6,5 @@ import android.arch.persistence.room.RoomDatabase
 @Database(entities = arrayOf(Quote::class, Tag::class), version = 1)
 abstract class QuoteDatabase : RoomDatabase() {
     abstract fun quoteDao(): QuoteDao
+    abstract fun tagDao(): TagDao
 }

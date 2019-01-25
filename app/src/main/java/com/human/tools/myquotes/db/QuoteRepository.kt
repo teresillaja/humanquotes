@@ -2,8 +2,10 @@ package com.human.tools.myquotes.db
 
 import com.human.tools.myquotes.domains.QuoteDomain
 import io.reactivex.Completable
+import io.reactivex.Single
+import javax.inject.Inject
 
-class QuoteRepository(
+class QuoteRepository @Inject constructor(
     private val quoteDao: QuoteDao,
     private val tagDao: TagDao
 ) {
@@ -16,5 +18,9 @@ class QuoteRepository(
             }
         }
     }
+
+//    fun getAllQuotes(): Single<List<QuoteDomain>> {
+//
+//    }
 
 }
